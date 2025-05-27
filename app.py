@@ -26,3 +26,20 @@ if show_scatter:
     fig2 = px.scatter(df, x='odometer', y='price',
                       title='Scatter Plot of Odometer vs Price')
     st.plotly_chart(fig2, use_container_width=True)
+
+# Grafico de Barras por tipo de transmision
+show_bar = st.checkbox('Show Bar Chart of Transmission Types')
+if show_bar:
+    trans_count = df['transmission'].value_counts().reset_index()
+    trans_count.columns = ['transmission_type', 'count']
+
+    fig3 = px.bar(trans_count, x='transmission_type', y='count',
+                  labels={'transmission_type': 'Transmisión', 'count': 'Cantidad'})
+    st.plotly_chart(fig3, use_container_width=True)
+
+# boxplot: Precio según el tipo de combustible
+show_box = st.checkbox('Show Box Plot of Price by Fuel Type')
+if show_box:
+    fig4 = px.box(df, x='fuel', y='price', points='all', title='Box Plot of Price by Fuel Type',
+                  labels={'fuel': 'Fuel Type', 'price': 'Price'})
+    st.plotly_chart(fig4, use_container_width=True)
