@@ -1,11 +1,19 @@
 # sp7_Proyect
-- Este es el proyecto donde se pone en practica lo aprendido en el Sprint 7
+#  Vehículos en Venta - Análisis Web App
 
-- Este consta de realizar una plicacion web, donde se grafican los datos obtenidos
-de un Dataset con informacion de anuncios publicados de vehiculos en venta.
+El presente proyecto es la implementacio de una aplicación web interactiva, desarrollada con **Streamlit**, que permite al usuario  visualizar un Dataset de anuncios de venta de vehiculos, con datos de EE. UU.
+El propocioto principal del presente es aplicar y practicar las habilidades aprendidas durante el curso de Ciencia de Datos, tales como: Entorno virtual, control de versiones, análisis exploratorio y desarrollo de dashboards web.
+---
+## Funcionalidades
+La app incluye las siguientes visualizaciones interactivas:
 
-- Esta aplicacion consta de una pagina principal donde se encuentran 2 botones: 
-    A) El primero mostrara un Histograma del odometro de los vehiculos contenidos en el dataset.
-    B) El segundo muestra un grafico de dispersión odómetro vs precio del mismo dataset.
+-  **Histograma del odómetro** (kilometraje del vehículo)
+-  **Gráfico de dispersión**: odómetro vs precio
+-  **Gráfico de barras** por tipo de transmisión
+-  **Boxplot de precio** por tipo de combustible
+
+Cada gráfico es activado mediante **casillas de verificación (checkboxes)** para visualizar cada grafico independintemete o todos a la vez, todo de forma personalizada e intuitiva.
+---
+
 
 
