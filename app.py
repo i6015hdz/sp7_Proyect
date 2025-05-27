@@ -11,14 +11,18 @@ st.title('Analysis of Car Sales Ads (USA)')
 # Encabezado
 st.header('Interactive Data Exploration')
 
-# Botón para histograma
-if st.button('Display Odometer Histogram'):
-    st.write('Mileage distribution (odometer)')
-    fig = px.histogram(df, x='odometer')
-    st.plotly_chart(fig, use_container_width=True)
+# Checkbox para mostrar los datos de Histograma
+show_histogram = st.checkbox('Show Histogram of odometer')
+if show_histogram:
+    st.subheader('Milage Distribution (Odometer)')
+    fig = px.histogram(df, x='odometer', nbins=50,
+                       title='Histogram of Odometer')
+    st.plotly_chart(fig)
 
-# Botón para gráfico de dispersión
-if st.button('Scatter Plot: Display odometer vs price '):
-    st.write('Relationship between odometer and price')
-    fig2 = px.scatter(df, x='odometer', y='price')
+# Checkbox para mostrar los datos de Scatter Plot (odmometer vs price)
+show_scatter = st.checkbox('Show Scatter Plot of Odometer vs Price')
+if show_scatter:
+    st.subheader('Odometer vs Price')
+    fig2 = px.scatter(df, x='odometer', y='price',
+                      title='Scatter Plot of Odometer vs Price')
     st.plotly_chart(fig2, use_container_width=True)
