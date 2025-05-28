@@ -14,6 +14,9 @@ La app incluye las siguientes visualizaciones interactivas:
 
 Cada gráfico es activado mediante **casillas de verificación (checkboxes)** para visualizar cada grafico independintemete o todos a la vez, todo de forma personalizada e intuitiva.
 ---
-
+## URL Streamlit Community Cloud
+- Se agrega Url para visuakizar remotamente la app
+- https://sp7proyect-c4yfghtrksh8qoia8x5stt.streamlit.app/
+---
 
 
